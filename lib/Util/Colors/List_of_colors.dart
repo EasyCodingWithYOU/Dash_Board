@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 List<Color> listofcolor = [
   Color(0xffE9E1FF),
   Color(0xffFFE1E6),
-  Color.fromARGB(255, 228, 206, 150)
+  Color(0xffFFEEC2),
 ];
 
 List<Color> listofTextcolor = [
