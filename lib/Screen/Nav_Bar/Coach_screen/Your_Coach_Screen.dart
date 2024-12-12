@@ -1,7 +1,9 @@
 import 'package:dash_board/Util/Colors/Colors.dart';
+import 'package:dash_board/Util/Png_Names/Png_Names.dart';
 import 'package:dash_board/Util/SVG_Names/SVG_Names.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class YourCoachScreen extends StatefulWidget {
   const YourCoachScreen({super.key});
@@ -11,18 +13,58 @@ class YourCoachScreen extends StatefulWidget {
 }
 
 class _YourCoachScreenState extends State<YourCoachScreen> {
+  final String googleMeetLink = "https://meet.google.com/wjm-btpw-bsh";
+
   @override
   Widget build(BuildContext context) {
+    Future<void> _launchGoogleMeetInChrome() async {
+      final Uri url = Uri.parse(googleMeetLink);
+      try {
+        if (await canLaunchUrl(url)) {
+          await launchUrl(
+            url,
+            mode: LaunchMode.externalApplication, // Open in external app
+          );
+        } else {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text('Could not open the link.')),
+          );
+        }
+      } catch (e) {
+        print(e);
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('An error occurred: $e')),
+        );
+      }
+    }
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 150.h),
-            Center(child: Image.asset(drjpg)),
+            Center(
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.blue, // Border color
+                    width: 3.0, // Border width
+                  ),
+                  borderRadius:
+                      BorderRadius.circular(10), // Optional rounded corners
+                ),
+                child: Image.asset(
+                  drjpg, // Replace with your image path
+                  width: 150, // Set your desired width
+                  height: 200, // Set your desired height
+                  fit: BoxFit.contain,
+                ),
+              ),
+            ),
             Center(
               child: Text(
-                'Dr.  Meera Krishnan',
+                'Dr.  Manohar Krishnan',
                 style: TextStyle(
                     color: textcolorblue,
                     fontSize: 80.sp,
@@ -171,7 +213,7 @@ class _YourCoachScreenState extends State<YourCoachScreen> {
                       SizedBox(height: 10.h), // Add spacing between the texts
                       Text(
                         softWrap: true,
-                        "Dr. Meera's sessions helped me stay smoke-free for 4 months!Ravi A.",
+                        "Dr. Manohar's sessions helped me stay smoke-free for 4 months!Ravi A.",
                         style: TextStyle(fontSize: 50.sp, color: textcolorblue),
                       ),
                     ],
@@ -182,27 +224,26 @@ class _YourCoachScreenState extends State<YourCoachScreen> {
             Padding(
               padding: EdgeInsets.only(left: 50.w, right: 50.w, bottom: 80.h),
               child: SizedBox(
-                height: 200.h,
-                width: double.infinity, // Takes the full width of the parent
-                child: ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: textcolorblue, // Background color
-                    foregroundColor: Colors.white, // Text color
-                    padding:
-                        EdgeInsets.symmetric(vertical: 16.h), // Button height
-                    shape: RoundedRectangleBorder(
-                      borderRadius:
-                          BorderRadius.circular(30.r), // Rounded corners
+                  height: 200.h,
+                  width: double.infinity, // Takes the full width of the parent
+                  child: ElevatedButton(
+                    onPressed: _launchGoogleMeetInChrome,
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: textcolorblue, // Background color
+                      foregroundColor: Colors.white, // Text color
+                      padding:
+                          EdgeInsets.symmetric(vertical: 16.0), // Button height
+                      shape: RoundedRectangleBorder(
+                        borderRadius:
+                            BorderRadius.circular(30.0), // Rounded corners
+                      ),
                     ),
-                  ),
-                  child: Text(
-                    "Book a Session",
-                    style:
-                        TextStyle(fontSize: 60.sp, fontWeight: FontWeight.bold),
-                  ),
-                ),
-              ),
+                    child: Text(
+                      "Connect to counselor",
+                      style: TextStyle(
+                          fontSize: 20.0, fontWeight: FontWeight.bold),
+                    ),
+                  )),
             ),
           ],
         ),
