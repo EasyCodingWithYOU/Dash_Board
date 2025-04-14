@@ -233,75 +233,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                       SizedBox(width: 20.w),
-
-                      // // =============== 5: Reclaim your freedom
-                      // Container(
-                      //   width: 700.w,
-                      //   height: 600.h,
-                      //   decoration: BoxDecoration(
-                      //     color: containerColor5,
-                      //     borderRadius: BorderRadius.circular(16),
-                      //   ),
-                      //   child: Stack(
-                      //     children: [
-                      //       Padding(
-                      //         padding: EdgeInsets.all(66.0.h),
-                      //         child: Align(
-                      //           alignment: Alignment.topLeft,
-                      //           child: SizedBox(
-                      //             width: 200,
-                      //             child: Text(
-                      //               "Reclaim your freedom – addiction doesn’t define you.",
-                      //               style: GoogleFonts.gabriela(
-                      //                 color: container5TextColor,
-                      //                 fontSize: 16,
-                      //               ),
-                      //             ),
-                      //           ),
-                      //         ),
-                      //       ),
-                      //       Align(
-                      //         alignment: Alignment.bottomRight,
-                      //         child: Image.asset('assets/images/freedom.png'),
-                      //       ),
-                      //     ],
-                      //   ),
-                      // ),
-                      // SizedBox(width: 20.w),
-
-                      // // =============== 6: Live a happier life
-                      // Container(
-                      //   width: 700.w,
-                      //   height: 600.h,
-                      //   decoration: BoxDecoration(
-                      //     color: containerColor6,
-                      //     borderRadius: BorderRadius.circular(16),
-                      //   ),
-                      //   child: Stack(
-                      //     children: [
-                      //       Padding(
-                      //         padding: EdgeInsets.all(66.0.h),
-                      //         child: Align(
-                      //           alignment: Alignment.topLeft,
-                      //           child: SizedBox(
-                      //             width: 200,
-                      //             child: Text(
-                      //               "Live a happier life – let go of what’s holding you back.",
-                      //               style: GoogleFonts.gabriela(
-                      //                 color: Colors.blueAccent,
-                      //                 fontSize: 16,
-                      //               ),
-                      //             ),
-                      //           ),
-                      //         ),
-                      //       ),
-                      //       Align(
-                      //         alignment: Alignment.bottomRight,
-                      //         child: Image.asset('assets/images/happiness.png'),
-                      //       ),
-                      //     ],
-                      //   ),
-                      // ),
                     ],
                   ),
                 ),
@@ -750,8 +681,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                   10.0), // Adjust the radius for rounded corners
                               child: Image.asset(
                                 awardpng, // Replace with your image path
-                                width: 80.0, // Set the desired image width
-                                height: 80.0, // Set the desired image height
+                                width: 200.w, // Set the desired image width
+                                height: 180.h, // Set the desired image height
                                 fit: BoxFit
                                     .cover, // Adjusts how the image should be fitted
                               ),

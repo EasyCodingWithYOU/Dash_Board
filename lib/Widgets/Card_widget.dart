@@ -40,72 +40,82 @@ class CardWidget extends StatelessWidget {
             ),
 
             // Heading text
-            Padding(
-              padding: EdgeInsets.only(top: 16.h, left: 20.w),
-              child: Text(
-                "Product Name",
-                style: TextStyle(
-                  fontSize: 60.sp,
-                  fontWeight: FontWeight.w600,
-                  color: Color(0xff191970),
+            Center(
+              child: Padding(
+                padding: EdgeInsets.only(
+                  top: 16.h,
+                ),
+                child: Text(
+                  "Product Name",
+                  style: TextStyle(
+                    fontSize: 60.sp,
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xff191970),
+                  ),
                 ),
               ),
             ),
 
             // Description text
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 26.w),
-              child: Text(
-                "70VG : 30PG : 18MG",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 36.sp,
-                  color: Colors.grey[700],
+            Center(
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                  vertical: 8.h,
+                ),
+                child: Text(
+                  "70VG : 30PG : 18MG",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 36.sp,
+                    color: Colors.grey[700],
+                  ),
                 ),
               ),
             ),
 
             // Row with three texts
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 16.h),
-              child: Row(
-                // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  // First Text
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 20.w),
-                    child: Text(
-                      "₹270",
+            Center(
+              child: Padding(
+                padding: EdgeInsets.symmetric(vertical: 16.h),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    // First Text
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 20.w),
+                      child: Text(
+                        "₹270",
+                        style: TextStyle(
+                          fontSize: 44.sp,
+                          color: Color(0xffFBBF24),
+                        ),
+                      ),
+                    ),
+
+                    // Second Text with cut line
+                    Text(
+                      "₹324",
                       style: TextStyle(
                         fontSize: 44.sp,
-                        color: Color(0xffFBBF24),
+                        color: Colors.grey,
+                        decoration: TextDecoration.lineThrough, // Strikethrough
                       ),
                     ),
-                  ),
 
-                  // Second Text with cut line
-                  Text(
-                    "₹324",
-                    style: TextStyle(
-                      fontSize: 44.sp,
-                      color: Colors.grey,
-                      decoration: TextDecoration.lineThrough, // Strikethrough
-                    ),
-                  ),
-
-                  // Third Text
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 20.w),
-                    child: Text(
-                      "20% Off",
-                      style: TextStyle(
-                        fontSize: 30.sp,
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xffEB5067),
+                    // Third Text
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 20.w),
+                      child: Text(
+                        "20% Off",
+                        style: TextStyle(
+                          fontSize: 30.sp,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xffEB5067),
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
 

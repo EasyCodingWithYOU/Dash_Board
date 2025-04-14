@@ -1,0 +1,2 @@
+/Users/usmannawaz/Documents/Task1/dashboard2/android/app/.cxx/Debug/j3cu2pg5/x86_64/CMakeFiles/edit_cache.dir
+/Users/usmannawaz/Documents/Task1/dashboard2/android/app/.cxx/Debug/j3cu2pg5/x86_64/CMakeFiles/rebuild_cache.dir

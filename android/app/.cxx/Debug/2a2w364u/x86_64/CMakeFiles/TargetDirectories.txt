@@ -1,0 +1,2 @@
+/Users/usmannawaz/Documents/Task1/clone/sih/android/app/.cxx/Debug/2a2w364u/x86_64/CMakeFiles/edit_cache.dir
+/Users/usmannawaz/Documents/Task1/clone/sih/android/app/.cxx/Debug/2a2w364u/x86_64/CMakeFiles/rebuild_cache.dir

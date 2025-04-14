@@ -19,17 +19,6 @@ class _NavBarScreenState extends State<NavBarScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () {
-      //     Navigator.push(
-      //       context,
-      //       MaterialPageRoute(
-      //         builder: (context) => FloatScreen1(),
-      //       ),
-      //     );
-      //   },
-      // ),
       body: screens[currentIndex],
       bottomNavigationBar: Stack(
         clipBehavior: Clip.none,

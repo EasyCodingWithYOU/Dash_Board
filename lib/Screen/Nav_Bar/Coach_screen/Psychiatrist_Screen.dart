@@ -139,7 +139,7 @@ class _PsychiatristScreenState extends State<PsychiatristScreen> {
                 return Padding(
                   padding: EdgeInsets.all(8.0.w),
                   child: Container(
-                    height: 1100.h,
+                    height: 1200.h,
                     width: double.infinity,
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -165,11 +165,13 @@ class _PsychiatristScreenState extends State<PsychiatristScreen> {
                               padding: EdgeInsets.only(top: 50.h, left: 20.w),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(8.r),
-                                child: Image.asset(
-                                  doctor['image'],
-                                  height: 400.h,
-                                  width: 350.w,
-                                  fit: BoxFit.cover,
+                                child: Center(
+                                  child: Image.asset(
+                                    doctor['image'],
+                                    height: 400.h,
+                                    width: 350.w,
+                                    fit: BoxFit.contain,
+                                  ),
                                 ),
                               ),
                             ),
